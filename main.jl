@@ -1,21 +1,19 @@
-println("Task 1-2");
+println("Task 1-2, option 7");
 
-println("Введите значение первой стороны:  ");
-storona1 = readline();
+println("Enter the width of the triangle ");
+width = readline();
 
-println("Введите значение второй стороны:  ");
-storona2 = readline();
+println("Enter the length of the triangle  ");
+length = readline();
 
-println("Введите значение угла:  ");
-gamma = readline();
+width = tryparse(Float64, width);
+length = tryparse(Float64, length);
 
-storona1 = tryparse(Float64, storona1);
-storona2 = tryparse(Float64, storona2);
-gamma = tryparse(Float64, gamma);
+P = (width * 2) + (length * 2);
+S = width * length;
+d = sqrt((width ^ 2) + (length ^ 2));
 
-storona3 = sqrt((storona1^2) + (storona2^2)) - (((storona1 * storona2) * 2 * cos(gamma)));
-s = (0.5 * (storona1 * storona2)) * sind(gamma);
-r = (storona1 * storona2 * storona3) / (4 * s);
-println("storona3 = $storona3");
-println("s = $s");
-println("r = $r");
+
+println("P = $P");
+println("S = $S");
+println("d = $d");
