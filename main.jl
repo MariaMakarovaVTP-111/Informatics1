@@ -1,19 +1,18 @@
-println("Введите значение первой стороны:  ");
-side1 = readline();
+println("Task 2-1");
 
-println("Введите значение второй стороны:  ");
-side2 = readline();
+println("Enter width: ");
+width = readline();
+ 
+println("Enter length: ");
+length = readline();
 
-println("Введите значение угла:  ");
-corner = readline();
+width = tryparse(Float64, width);
+length = tryparse(Float64, length);
 
-side1 = tryparse(Float64, side1);
-side2 = tryparse(Float64, side2);
-corner = tryparse(Float64, corner);
+P = (width * 2) + (length * 2);
+S = width * length;
+d = sqrt((width ^ 2) + (length ^ 2));
 
-side3 = sqrt((side1^2) + (side2^2)) - (((side1 * side2) * 2 * cos(corner)));
-s = (0.5 * (side1 * side2)) * sind(corner);
-r = (side1 * side2 * side3) / (4 * s);
-println("side3 = $side3");
-println("s = $s");
-println("r = $r");
+println("P = $P");
+println("S = $S");
+println("d = $d");
